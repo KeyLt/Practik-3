@@ -1,4 +1,15 @@
 ﻿// // Подсчитать сумму цифр в числе
+int x = int.Parse(Console.ReadLine());
+int sum=0;
+for (int i=10; i>=0; i--)
+{
+    sum+=x/(int)Math.Pow(10.0,i);
+    x=x%(int)Math.Pow(10.0,i);
+}
+Console.WriteLine(sum);
+
+//Попытки
+
 // using System;
 // class Program {
 // public static int Main() 
@@ -34,14 +45,14 @@
 // // float.Parse
 
 
-int a = int.Parse(Console.ReadLine());
-            long s = 0;
-            while (a > 0)
-            {
-                long p = a;
-                s = s + p % 10;
-                p = p /10 ;
+// int a = int.Parse(Console.ReadLine());
+//             long s = 0;
+//             while (a > 0)
+//             {
+//                 long p = a;
+//                 s = s + p % 10;
+//                 p = p /10 ;
                 
-            }
-return 0;
- Console.WriteLine(s);
+//             }
+// return 0;
+//  Console.WriteLine(s);
